@@ -1,0 +1,28 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <script src="{% static 'js/manage.js' %}"></script>
+  </head>
+<body class="main" style="background-color:rgba(0, 0, 0, 0.15);">
+  <h1>CloudBuster Movies<h1>
+  <h3>Manage Page/Employee Panel:<h3>
+  <p>Here you can manually enter a movie or add/remove how many of a movie is in stock.</p>
+  <table >
+  <tr><td>Enter Movie Title:</td><td> <input type="text" name="add" id="add"/></td>
+  <td><input id="submit" type="submit" value="Add Movie"/></td>
+  </tr>
+  <tr><td id="error"></td></tr>
+  </table>
+  <h1>CloudBuster's Catalogue:</h1>
+  <table id="movies" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+  </table>
+  
+  <h2 id="msg" ></h2>
+  <a href='/'>Home</a>
+</body>
+</html>

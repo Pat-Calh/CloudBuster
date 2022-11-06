@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'css/s.css' %}"/>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"></script>
+    <script src="{% static 'js/checkout.js' %}"></script>
+  </head>
+  <body  style="background-color:rgba(0, 0, 0, 0.15);">
+  <h1>CloudBuster Movies<h1>
+  <h3>Checkout:<h3>
+  <h5>Here you can type in a user's email and see movies they have checked out.</h5>
+  <table >
+  <tr><td>Email:</td><td> <input type="email" name="email" id="email"/></td></tr>
+  </table>
+  <input id="submit" type="submit" value="Grab User"/>
+
+  <table id="user">
+  </table>
+  
+  <h2 id="msg"></h2>
+  <div>
+  <h1>CloudBuster Catalogue:</h1>
+  <p>To check a movie out, type in the user's email, then select the button next to the desired movie, then hit checkout for user!</p>
+  <table id="movies" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);">
+    <tr><td>Title:</td><td style="padding-left:15em">Stock:</td></tr>
+  </table>
+  <input id="button" type="button" name="btn" value="Checkout For User"/>
+  <br>
+  </div>
+  <a href='/'>Home</a>
+</body>
+</html>
